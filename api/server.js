@@ -17,7 +17,7 @@ server.use(cors());
 
 server.use('/api/projects', projectsRouter);
 server.use('/api/tasks', tasksRouter);
-// server.use('/api/resources', resourcesRouter);
+server.use('/api/resources', resourcesRouter);
 
 
 server.get('/', (req, res) => {
