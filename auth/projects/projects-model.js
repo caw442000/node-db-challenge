@@ -27,12 +27,12 @@ function findBy(id) {
   return db("tasks")
     .join("projects as p", "tasks.project_id", "p.id")
     .select(
+      "p.project_name",
+      "p.description as project_description",
       "tasks.id as task_id",
       "tasks.description as task_description",
       "tasks.notes as task_notes",
-      "tasks.completed",
-      "p.project_name",
-      "p.description as project_description"
+      "tasks.completed"
     )
     .where({ project_id: id });
 }

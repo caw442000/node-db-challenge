@@ -38,6 +38,18 @@ router.get("/:id/tasks", (req, res) => {
     });
 });
 
+router.get("/:id/task", (req, res) => {
+
+  const { id } = req.params
+  Projects.findBy(id)
+    .then(project => {
+      res.status(200).json(project)
+
+    })
+    .catch(err => {
+      res.status(500).json({ errorMessage: `${err}` });
+    });
+});
 
 router.post("/", (req, res) => {
   Projects.add(req.body)
