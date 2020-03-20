@@ -15,7 +15,7 @@ server.use(helmet());
 server.use(morgan('dev'));
 server.use(cors());
 
-// server.use('/api/projects', projectsRouter);
+server.use('/api/projects', projectsRouter);
 // server.use('/api/tasks', tasksRouter);
 // server.use('/api/resources', resourcesRouter);
 

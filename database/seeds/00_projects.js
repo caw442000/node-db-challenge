@@ -6,17 +6,17 @@ exports.seed = function(knex) {
     {
       project_name: "resource one",
       description: "solve prime number theory",
-      completed: false
+      completed: 0
     },
     {
       project_name: "resource two",
       description: "can not help",
-      completed: false
+      completed: 1
     },
     {
       project_name: "resource three",
       description: "none",
-      completed: false
+      completed: 1
     }
 ]
   return knex('projects').truncate()
