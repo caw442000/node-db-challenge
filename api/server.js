@@ -5,6 +5,11 @@ const cors = require('cors');
 
 const server = express();
 
+const projectsRouter = require('../auth/projects/projects-router.js');
+const resourcesRouter = require('../auth/resources/resources-router.js');
+const tasksRouter = require('../auth/tasks/tasks-router.js');
+
+
 server.use(express.json());
 server.use(helmet());
 server.use(morgan('dev'));
