@@ -6,11 +6,11 @@ module.exports = {
 }
 
 function add() {
-
+  return db('projects').inser
 
 }
 
 function find() {
 
-  
+
 }
